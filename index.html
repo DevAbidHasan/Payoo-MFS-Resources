@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAYOO Mobile App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+      />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-slate-800">
+    <section class="max-w-md min-h-screen bg-gray-200 mx-auto py-6">
+        <header>
+            <nav class="flex justify-center mt-10 items-center">
+                <div class="mt-10 relative flex justify-center items-center mb-10 w-9/12">
+                    <img class="w-48 absolute" src="./assets/bg.png" alt="">
+                    <img class="w-16" src="./assets/Group.png" alt="">
+                </div>
+            </nav>
+        </header>
+        <!-- login form here -->
+        <div class="">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div class="card-body">
+                  <form class="fieldset">
+                    <label class="fieldset-label font-bold">Mobile Number</label>
+                    <input type="number" value="00000000000" id="Account-Number" class="input rounded-3xl" placeholder="Enter Your Number" required />
+                    <label class="fieldset-label font-bold">4 Digit Pin</label>
+                    <input type="text" value="1234" id="Pin" required class="input rounded-3xl" placeholder="Enter 4 Digit Pin" />
+                    <div><a class="link link-hover">Forgot password?</a></div>
+                    <button id="login-btn" class="btn rounded-3xl border-none bg-blue-700 btn-neutral mt-4">Login</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+
+    <script src="./script/login.js"></script>
+  </body>
+</html>
