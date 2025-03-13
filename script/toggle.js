@@ -1,18 +1,19 @@
 // By-default
 document.getElementById("addmoney").style.display="none";
 document.getElementById("cashout").style.display="none";
-
-
+document.getElementById("transaction-history").style.display="none";
 
 // add money
 document.getElementById("add-money-box")
 .addEventListener("click", function(event){
-    document.getElementById("addmoney").style.display="block";
-    document.getElementById("cashout").style.display="none";
+    handleToggle("addmoney", "block");
+    handleToggle("cashout", "none");
+    handleToggle("transaction-history", "none");
 })
-// cash out
 document.getElementById("cashout-box")
 .addEventListener("click", function(event){
-    document.getElementById("addmoney").style.display="none";
-    document.getElementById("cashout").style.display="block";
+    handleToggle("addmoney", "none");
+    handleToggle("transaction-history", "none");
+    handleToggle("cashout", "block");
 })
+

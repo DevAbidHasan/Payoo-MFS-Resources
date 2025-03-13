@@ -60,7 +60,7 @@
                         <h3 class="text-sm">Pay Bill</h3>
                     </div>
                     <!-- card-6 -->
-                    <div class="box cursor-pointer px-2 py-4 rounded-md border flex justify-center items-center flex-col">
+                    <div id="transaction-box" class="box cursor-pointer px-2 py-4 rounded-md border flex justify-center items-center flex-col">
                         <img class="" src="./assets/transaction1.png" alt="">
                         <h3 class="text-sm">Transactions</h3>
                     </div>
@@ -74,7 +74,7 @@
                           <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                             <div class="card-body">
                                 <legend>Select A Bank</legend>
-                                <select class="select rounded-3xl">
+                                <select id="allbank" class="select rounded-3xl">
                                     <option disabled selected>Select Bank</option>
                                     <option value="Bkash">Bkash</option>
                                     <option value="Nagad">Nagad</option>
@@ -82,7 +82,7 @@
                                   </select>
                               <fieldset class="fieldset">
                                 <label class="fieldset-label">Bank Account Number</label>
-                                <input type="number" required class="input rounded-3xl" value="00000000000" placeholder="Enter 11 digit account number" />
+                                <input type="number" id="account-number" required class="input rounded-3xl" value="00000000000" placeholder="Enter 11 digit account number" />
                                 <label class="fieldset-label">Amount to Add</label>
                                 <input id="amount" type="number" required class="input rounded-3xl" placeholder="Add Amount to Add" />
                                 <label class="fieldset-label">Pin Number</label>
@@ -107,7 +107,7 @@
                             <div class="card-body">
                               <fieldset class="fieldset">
                                 <label class="fieldset-label">Agent Number</label>
-                                <input type="number" class="input rounded-3xl" value="00000000000" placeholder="Enter 11 digit account Number" />
+                                <input id="Account-number" type="number" class="input rounded-3xl" value="00000000000" placeholder="Enter 11 digit account Number" />
                                 <label class="fieldset-label">Amount to Cash Out</label>
                                 <input id="cashout-amount" type="number" class="input rounded-3xl" placeholder="Enter Amount to Cash Out" />
                                 <label class="fieldset-label">Pin Number</label>
@@ -120,6 +120,15 @@
                         </div>
                       </div>
                 </section>
+                <!-- cashout section ends -->
+                <!-- transaction section -->
+                 <section id="transaction-history">
+                  <h1 class="mt-6 mb-6 text-amber-700 font-bold text-2xl">Transactions History</h1>
+                  <div id="transaction-container">
+
+                  </div>
+                 </section>
+
              </section>
         </header>
     </section>
@@ -129,5 +138,7 @@
     <script src="./script/addMoney.js"></script>
     <script src="./script/toggle.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./utilities/utilities.js"></script>
+    <script src="./script/transactionHistory.js"></script>
 </body>
 </html>
